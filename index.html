@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <main class="main">
+    
+    <div class="deck-types js-deck-types">
+      <h2>Выберите колоду</h2>
+      <div class="buttons">
+        <button type="button" class="button" id="oh">OH</button>
+        <button type="button" class="button" id="habitat">Habitat</button>
+        <button type="button" class="button" id="resource">Resource</button>
+      </div>
+    </div>
+    <h2 class="selected-card js-selected-deck" style="display: none;"></h2>
+    <div class="step-2 js-step-2" style="display: none;">
+      <div class="buttons">
+        <button type="button" class="button js-choose-randomly">Выбрать случайную карту</button>
+        <div class="form-group">
+          <div style="margin-right: 6px;">
+            <span>Выбрать карту по номеру:</span><br>
+            <small>(от одного до <span class="js-max-count"></span>)</small>
+          </div>
+          <input type="number" min="1" class="js-count" oninput="this.validity.valid||(this.value='');">
+          <button type="button" class="button js-get-card-button">Показать</button>
+        </div>
+        <button type="button" class="button js-clear">Очистить все</button>
+      </div>
+      
+      <div class="selected-cards js-selected-cards"></div>
+    </div>
+  </main>
+  <script src="js.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #2d1a52;
+  color: white;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  position: relative;
+  padding-top: 150px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.button {
+  border: 0;
+  padding: 8px 10px;
+  background-color: #f95a4f;
+  color: white;
+  font-size: 16px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.deck-types {
+  padding: 15px 15px 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, .2);
+  background-color: #171545;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.deck-types .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.deck-types .button {
+  width: 100%;
+}
+
+.deck-types .button.active {
+  background-color: #4f7ff9;
+}
+
+.step-2 {
+  padding: 15px;
+}
+
+.step-2 .buttons {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+
+.step-2 .buttons button:last-child {
+  margin-left: auto;
+}
+
+.step-2 .button {
+  background-color: #453455;
+}
+
+.step-2 .form-group {
+  display: flex;
+}
+
+.step-2 .form-group input {
+  width: 50px;
+  border-radius: 3px 0 0 3px;
+  background-color: rgba(255, 255, 255, .4);
+  padding: 0;
+  border: 0;
+  color: white;
+  padding: 0 6px;
+}
+
+.step-2 .form-group input:focus {
+  outline: none;
+}
+
+.step-2 .form-group .button {
+  border-radius: 0 3px 3px 0;
+}
+
+.selected-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.selected-cards .card-item img {
+  display: block;
+  width: 300px;
+}
+
+@media screen and (max-width: 767px) {
+  .step-2 .buttons {
+    display: block;
+  }
+
+  .step-2 .form-group {
+    margin: 15px 0;
+  }
+
+  .step-2 .buttons button:last-child {
+    margin-left: initial;
+  }
+}
